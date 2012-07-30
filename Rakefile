@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Sweekstake::Application.load_tasks
+Sweepstake::Application.load_tasks
