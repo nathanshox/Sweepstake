@@ -19,7 +19,7 @@ namespace :admin  do
                                   :bronze => elements[4].content)
         Rails.logger.info "Updated #{elements[1].content} with RANK #{elements[0].content} GOLD #{elements[2].content} SILVER #{elements[3].content} BRONZE #{elements[4].content}"
       else
-        Rails.logger.warning "Could not find country with name #{elements[1].content}"
+        Rails.logger.info "Could not find country with name #{elements[1].content}"
       end
     end
 
