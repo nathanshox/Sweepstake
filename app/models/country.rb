@@ -3,6 +3,8 @@ class Country < ActiveRecord::Base
 
   before_save :calculate_points
 
+  belongs_to :person
+
   private
 
     def calculate_points
