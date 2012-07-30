@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120730181404) do
+ActiveRecord::Schema.define(:version => 20120730192129) do
 
   create_table "countries", :force => true do |t|
     t.string   "name"
-    t.integer  "rank",         :default => 0
+    t.integer  "rank"
     t.integer  "gold",         :default => 0
     t.integer  "silver",       :default => 0
     t.integer  "bronze",       :default => 0
