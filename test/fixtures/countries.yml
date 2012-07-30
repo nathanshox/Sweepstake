@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  rank: 1
+  gold: 1
+  silver: 1
+  bronze: 1
+  points: 9.99
+  factor: 9.99
+  total_points: 9.99
+
+two:
+  name: MyString
+  rank: 1
+  gold: 1
+  silver: 1
+  bronze: 1
+  points: 9.99
+  factor: 9.99
+  total_points: 9.99
