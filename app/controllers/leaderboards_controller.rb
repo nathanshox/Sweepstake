@@ -4,5 +4,6 @@ class LeaderboardsController < ApplicationController
   end
 
   def people
+    @people = Person.order("points DESC")
   end
 end

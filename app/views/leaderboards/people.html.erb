@@ -9,6 +9,11 @@
     <tr>
   </thead>
   <tbody>
-    <!-- render person template -->
+  <% @people.each do |person| %>
+    <tr>
+      <td><%= person.name %></td>
+      <td><%= person.points %></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
