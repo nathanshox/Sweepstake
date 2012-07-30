@@ -15,6 +15,17 @@
     <tr>
   </thead>
   <tbody>
-    <!-- render country template -->
+  <% @countries.each do |country| %>
+    <tr>
+      <td><%= country.rank %></td>
+      <td><%= country.name %></td>
+      <td><%= country.gold %></td>
+      <td><%= country.silver %></td>
+      <td><%= country.bronze %></td>
+      <td><%= country.points.to_s %></td>
+      <td><%= country.factor.to_s %></td>
+      <td><strong><%= country.total_points.to_s %></strong></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
