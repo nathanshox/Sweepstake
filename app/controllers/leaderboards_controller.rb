@@ -1,6 +1,8 @@
 class LeaderboardsController < ApplicationController
   def countries
-    @countries = Country.order("rank ASC")
+    @ranked = Country.where("rank is not null").order("rank ASC")
+    @not_ranked = Country.where("rank is null")
+    @countries = @ranked + @not_ranked
   end
 
   def people
