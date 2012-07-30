@@ -1,8 +1,17 @@
 source 'https://rubygems.org'
 
+ruby '1.9.2' # for Heroku
+
 gem 'rails', '3.2.7'
 
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'thin'
+  gem 'pg'
+end
 
 gem "nokogiri", "1.5.5"
 
