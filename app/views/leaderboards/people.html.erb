@@ -14,7 +14,7 @@
   <% @people.each do |person| %>
     <tr>
       <td><%= person.name %></td>
-      <td><%= person.points %></td>
+      <td><a href="#" rel="tooltip" title="<%= person.points.to_s %>"><strong><%= person.points.truncate(3) %></strong></a></td>
     </tr>
   <% end %>
   </tbody>
