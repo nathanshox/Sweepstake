@@ -1,0 +1,33 @@
+<h1>London 2012 Sweepstake</h1>
+<h2><%= @person.name %></h2>
+<p>
+  <%= link_to 'Back to People leaderboards', leaderboards_people_url, :class => "btn btn-info btn-large" %>
+</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Medal Rank</th>
+      <th>Name</th>
+      <th>Gold</th>
+      <th>Silver</th>
+      <th>Bronze</th>
+      <th>Points</th>
+      <th>Factor</th>
+      <th><strong>Total Points</strong></th>
+    <tr>
+  </thead>
+  <tbody>
+  <% @person.countries.each do |country| %>
+    <tr>
+      <td><%= country.rank %></td>
+      <td><%= country.name %></td>
+      <td><%= country.gold %></td>
+      <td><%= country.silver %></td>
+      <td><%= country.bronze %></td>
+      <td><a href="#" rel="tooltip" title="<%= country.points.to_s %>"><%= country.points.truncate(3).to_s %></a></td>
+      <td><a href="#" rel="tooltip" title="<%= country.factor.to_s %>"><%= country.factor.truncate(3).to_s %></a></td>
+      <td><a href="#" rel="tooltip" title="<%= country.total_points.to_s %>"><strong><%= country.total_points.truncate(3).to_s %></strong></a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
