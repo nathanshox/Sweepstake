@@ -8,14 +8,14 @@
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Medal Rank</th>
-      <th>Name</th>
-      <th>Gold</th>
-      <th>Silver</th>
-      <th>Bronze</th>
-      <th>Points</th>
-      <th>Factor</th>
-      <th><strong>Total Points</strong></th>
+      <th><%= sortable 'rank', 'Medal Rank' %></th>
+      <th><%= sortable 'name' %></th>
+      <th><%= sortable "gold" %></th>
+      <th><%= sortable 'silver' %></th>
+      <th><%= sortable 'bronze' %></th>
+      <th><%= sortable 'points' %></th>
+      <th><%= sortable 'factor' %></th>
+      <th><strong><%= sortable 'total_points' %></strong></th>
     <tr>
   </thead>
   <tbody>
